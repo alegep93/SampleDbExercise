@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="index.Master.cs" Inherits="SampleDbExercise.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Content/style.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Scripts/FilterToggle.js"></script>
+    <script src="Scripts/DynamicMenuSelected.js"></script>
+    <asp:ContentPlaceHolder ID="title" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <nav id="header" class="nav navbar-inverse">
+        <div class="container-fluid">
+            <div class="row">
+                <a class="navbar-brand" href="index.aspx">Sample Db Exercise</a>
+                <ul class="nav nav-pills col-md-5 col-md-offset-2" style="margin-top: 5px;">
+                    <li role="presentation"><a href="index.aspx">Home</a></li>
+                    <li role="presentation"><a href="customer.aspx">Customer</a></li>
+                    <li role="presentation"><a href="order.aspx">Order</a></li>
+                    <li role="presentation"><a href="orderitem.aspx">OrderItem</a></li>
+                    <li role="presentation"><a href="product.aspx">Product</a></li>
+                    <li role="presentation"><a href="supplier.aspx">Supplier</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- End container-fluid -->
+    </nav>
+    <!-- End Header -->
+    <asp:ContentPlaceHolder ID="body" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>
