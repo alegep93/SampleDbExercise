@@ -33,13 +33,14 @@
     .pagination-container td table tr td {
         position: relative;
         float: left;
-        padding: 6px 12px;
-        margin-left: -1px;
+        padding: 6px 15px;
+        margin-right: 5px;
         line-height: 1.42857143;
         color: #337ab7;
         text-decoration: none;
         background-color: #fff;
         border: 1px solid #ddd;
+        border-radius: 4px;
     }
 
         .pagination-container td table tr td:hover,
@@ -52,11 +53,16 @@
 
 #btnCerca,
 #body_btnCerca {
-    width: 200px;
+    width: 190px;
     position: relative;
     top: 20px;
 }
 p.lead{
-    margin-top: 20px;
+    width: 200px;
+    margin: 20px auto;
     cursor: pointer;
+}
+table.table.table-striped th,
+table.table.table-striped td{
+    text-align: center;
 }

@@ -22,4 +22,8 @@
             $("ul.nav-pills li:last-child").addClass("active");
             break;
     }
+
+    //var tableChkColumn = $("table.table.table-striped tr td:last-child input");
+    //if(tableChkColumn.val() == "on")
+    //    tableChkColumn.attr("Checked","checked");
 });

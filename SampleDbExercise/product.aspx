@@ -1,10 +1,10 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/index.Master" CodeBehind="product.aspx.cs" Inherits="SampleDbExercise.product" %>
 
-<asp:content id="Content1" contentplaceholderid="title" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
     <title>Product</title>
-</asp:content>
+</asp:Content>
 
-<asp:content id="bodyContainer" contentplaceholderid="body" runat="server">
+<asp:Content ID="bodyContainer" ContentPlaceHolderID="body" runat="server">
     <form id="customerForm" runat="server">
         <div class="container-fluid">
             <div class="row">
@@ -29,7 +29,7 @@
                         <asp:TextBox ID="txtUnitPrice" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
                     <div class="col-md-2">
-                        <label for="txtDiscont" class="label">Discontinuo</label>
+                        <label for="txtDiscont" class="label">Discontinuo [0-1]</label>
                         <asp:TextBox ID="txtDiscont" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
                     <div class="col-md-2 text-center">
@@ -51,7 +51,12 @@
                             <asp:BoundField HeaderText="Nome Prodotto" DataField="ProductName" />
                             <asp:BoundField HeaderText="Package" DataField="Package" />
                             <asp:BoundField HeaderText="Prezzo Unitario" DataField="UnitPrice" />
-                            <asp:BoundField HeaderText="Discontinuo" DataField="IsDiscontinued" />
+                            <%--<asp:BoundField HeaderText="Discontinuo" DataField="IsDiscontinued"  />--%>
+                            <asp:TemplateField HeaderText="Discontinuo">
+                                <ItemTemplate>
+                                    <asp:CheckBox ID="chkCheckBox" runat="server" Checked='<%# ((bool)Eval("IsDiscontinued")) %>' />
+                                </ItemTemplate>
+                            </asp:TemplateField>
                         </Columns>
                         <PagerStyle ForeColor="#333" BorderWidth="0" BorderColor="Transparent" BorderStyle="None" CssClass="text-center pagination-container" />
                     </asp:GridView>
@@ -59,4 +64,4 @@
             </div>
         </div>
     </form>
-</asp:content>
+</asp:Content>
